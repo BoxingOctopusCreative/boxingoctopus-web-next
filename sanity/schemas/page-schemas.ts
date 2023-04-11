@@ -1,27 +1,40 @@
 const page = {
-    name: 'page',
-    title: 'Pages',
-    type: 'document',
+    name:   'page',
+    title:  'Pages',
+    type:   'document',
     fields: [
         {
-            name: 'title',
+            name:  'title',
             title: 'Title',
-            type: 'string',
+            type:  'string',
         },
         {
-            name: 'slug',
+            name:  'slug',
             title: 'Slug',
-            type: 'slug',
+            type:  'slug',
             options: {
-                source: 'title',
+                source:    'title',
                 maxLength: 96,
             },
         },
         {
-            name: 'content',
+            name:    'image',
+            title:   'Image',
+            type:    'image',
+            options: { hotspot: true }, 
+            fields:  [
+                {
+                    name:  'alt',
+                    title: 'Alt',
+                    type:  'string',
+                },
+            ]
+        },
+        {
+            name:  'content',
             title: 'Content',
-            type: 'array',
-            of: [{ type: 'block' }],
+            type:  'array',
+            of:    [{ type: 'block' }],
         },
     ],
 };
