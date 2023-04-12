@@ -19,6 +19,7 @@ export default async function RootLayout({children}: {children: React.ReactNode}
 
   const projects          = await getProjects()
   const pages             = await getPages()
+  const bocAssetsUrl      = "https://boxingoctopus-assets.nyc3.digitaloceanspaces.com"
   const logoUrl           = "https://boxingoctopus-assets.nyc3.digitaloceanspaces.com/img/Logo%20White.png"
   const ghUrl             = "https://github.com/BoxingOctopusCreative"
   const merchUrl          = "https://tee.pub/lic/boxingoctopuscreative"
@@ -28,6 +29,8 @@ export default async function RootLayout({children}: {children: React.ReactNode}
     <html lang="en">
       <head>
         <link rel="apple-touch-icon" sizes="180x180" href="https://boxingoctopus-assets.nyc3.digitaloceanspaces.com/icons/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="512x512" href="https://boxingoctopus-assets.nyc3.digitaloceanspaces.com/icons/android-chrome-512x512.png" />
+        <link rel="icon" type="image/png" sizes="192x192" href="https://boxingoctopus-assets.nyc3.digitaloceanspaces.com/icons/android-chrome-192x192.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="https://boxingoctopus-assets.nyc3.digitaloceanspaces.com/icons/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="https://boxingoctopus-assets.nyc3.digitaloceanspaces.com/icons/favicon-16x16.png" />
         <link rel="manifest" href="https://boxingoctopus-assets.nyc3.digitaloceanspaces.com/icons/site.webmanifest" />
