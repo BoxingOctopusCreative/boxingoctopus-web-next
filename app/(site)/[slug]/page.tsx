@@ -18,7 +18,7 @@ export default async function Page({params}: Props) {
                 <div className="p-4 justify-center">
                     <Image src={page.image} alt={page.title} width={400} height={400} className="rounded-full" />
                 </div>
-                <div className="flex p-4 justify-normal text-xl"><PortableText value={page.content} /></div>
+                <div className="flex p-4 justify-normal text-3xl"><PortableText value={page.content} /></div>
             </div>
         </>
     )
