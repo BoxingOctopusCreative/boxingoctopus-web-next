@@ -33,10 +33,10 @@ export default async function RootLayout({children}: {children: React.ReactNode}
         <link rel="manifest" href="https://boxingoctopus-assets.nyc3.digitaloceanspaces.com/icons/site.webmanifest" />
       </head>
       <body className="bg-black">
-        <div style={bebasNeue.style} className="container mx-auto text-white">
-          <div className="max-w-7xl mx-auto items-center justify-between">
+        <div style={bebasNeue.style} className="container mx-auto max-w-7xl h-full text-white">
+          <div className="mx-auto h-full items-center justify-between">
             <header>
-              <nav className="flex p-4 text-3xl !font-medium ml-4 justify-between px-6">
+              <nav className="flex p-4 text-3xl !font-medium ml-4 justify-between px-2">
                 <Link href="/"><Image src={logoUrl} alt="Boxing Octopus Creative" width={75} height={75} /></Link>
                 <Link href="/" className="p-1 mt-3 hover:scale-105">Home</Link>
                 {pages.map((page) => (
@@ -49,7 +49,7 @@ export default async function RootLayout({children}: {children: React.ReactNode}
                 <Link href={merchUrl} className="p-1 mt-3 hover:scale-105" target="_blank">Merch</Link>
               </nav>
             </header>
-            <main className="grid grid-cols-2 justify-between content-end">
+            <main className="grid grid-cols-2 justify-between content-end w-full">
               {children}
             </main>
             <footer className="flex p-1 mt-3 mb-3 text-2xl font-medium justify-center sticky bottom-0">

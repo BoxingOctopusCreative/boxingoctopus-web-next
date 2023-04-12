@@ -13,18 +13,12 @@ export default async function Page({params}: Props) {
 
     return (
         <>
-            <div className="flex justify-end text-6xl">
-                <div className="flex justify-end text-6xl">
-                    <h2>{page.title}</h2>
-                </div>
-            </div>
-            <div className="flex justify-center">
-                <div className="flex justify-center">
+            <div className="grid grid-cols-2 gap-4 w-full place-content-center">
+                <div className="flex p-4 justify-end col-span-2 text-6xl w-full">{page.title}</div>
+                <div className="p-4 justify-center">
                     <Image src={page.image} alt={page.title} width={400} height={400} className="rounded-full" />
                 </div>
-                <div className="flex justify-normal text-xl">
-                    <PortableText value={page.content} />
-                </div>
+                <div className="flex p-4 justify-normal text-xl"><PortableText value={page.content} /></div>
             </div>
         </>
     )
